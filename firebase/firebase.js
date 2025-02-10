@@ -6,7 +6,7 @@ import {
   onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
 
-// Firebase Configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyCKG2APrCdLiwg9kgKx8d0J9gJg1ABSOWM",
   authDomain: "car-rental-system-959b9.firebaseapp.com",
@@ -17,7 +17,7 @@ const firebaseConfig = {
   measurementId: "G-J61J7Z49FY"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
