@@ -1,4 +1,4 @@
-/* Fullscreen Background */
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -10,7 +10,7 @@ body {
     position: relative;
 }
 
-/* Blur Overlay for Better Readability */
+
 body::before {
     content: "";
     position: absolute;
@@ -23,7 +23,6 @@ body::before {
     z-index: -1;
 }
 
-/* Form Container */
 .container {
     width: 350px;
     background: rgba(68, 44, 222, 0);
@@ -35,7 +34,7 @@ body::before {
 
 }
 
-/* Input Fields */
+
 input {
     width: 90%;
     padding: 10px;
@@ -51,7 +50,6 @@ input:focus {
     outline: none;
 }
 
-/* Buttons */
 button {
     width: 100%;
     padding: 10px;
@@ -68,7 +66,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Toggle Text */
+
 .toggle {
     text-align: center;
     margin-top: 10px;
@@ -84,7 +82,7 @@ button:hover {
     color: #218838;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -96,9 +94,8 @@ button:hover {
     }
 }
 
-/* Responsive Adjustments */
 
-/* Mobile Screens */
+
 @media (max-width: 480px) {
     .container {
         width: 90%;
@@ -119,14 +116,13 @@ button:hover {
     }
 }
 
-/* Tablets */
+
 @media (max-width: 768px) {
     .container {
         width: 80%;
     }
 }
 
-/* Larger Screens */
 @media (max-width: 1024px) {
     .container {
         width: 50%;
