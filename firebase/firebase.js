@@ -2,7 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebas
 import { 
   getAuth, 
   createUserWithEmailAndPassword, 
-  signInWithEmailAndPassword 
+  signInWithEmailAndPassword, signOut, 
+  onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
 
 // Firebase Configuration
@@ -20,4 +21,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-export { auth, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("User is logged in:", user);
+    window.location.href = "./mainproject/index.html"; // Redirect if logged in
+  } else {
+    console.log("No user is logged in.");
+  }
+});
+
+export { auth, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword , signOut, 
+  onAuthStateChanged};

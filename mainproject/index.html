@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlideCar Rentals</title>
+    <link rel="stylesheet" href="index.css">
+    <script    src="index.js" defer ></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="nav">
+    <div id="nav1">
+        <div id="nav1.1">
+            <h3 class="nitem1">GlideCar Rentals</h3>
+        </div>
+        <div id="sbar">
+            <input type="text" id="search" placeholder="Search ...">
+            <span><img id="logo1" src="../assets/serachbar.png" width="22px" height="33px"></span>
+        </div>
+        <div class="nav1-2">
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#admin">AdminPannel</a>
+            <a class="nav-link" href="javascript:void(0)" id="cart-link">Cart(<span id="cart-count">0</span>)</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- Car Booking -->
+<div id="book">
+    <div class="booking-container">
+        <h2>Car Rental</h2>
+        <label for="pickup">Pickup Location</label>
+        <input type="text" id="pickup" placeholder="Enter pickup location">
+        
+        <label for="drop">Drop-off Location</label>
+        <input type="text" id="drop" placeholder="Enter drop-off location">
+        
+        <label for="pickup-date">Pickup Date</label>
+        <input type="date" id="pickup-date">
+        
+        <label for="drop-date">Drop-off Date</label>
+        <input type="date" id="drop-date">
+        
+        <button onclick="bookCar()">Book Now</button>
+    </div>
+    <div id="carimg">
+        <img src="../assets/carimgredfire.jpg" width="900vw" height="500vh">
+    </div>
+</div>
+
+<div id="payment-section" class="hidden">
+    <h2>Choose Payment Method</h2>
+    <select id="payment-method">
+        <option value="credit-card">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="phonepay">PhonePe</option>
+        <option value="Gpay">GPay</option>
+        <option value="Paytm">Paytm</option>
+        <option value="razopay">Razorpay</option>
+    </select>
+    <button onclick="processPayment()">Pay Now</button>
+</div>
+
+<h2 id="avail">Available Cars for Rent</h2>
+
+<div class="car-container" id="car-container"></div>
+
+<div id="cart-section" class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <button id="clear-cart">Clear Cart</button>
+    <button onclick="showPaymentSection()">Proceed to Payment</button>
+</div>
+<div id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@glidecarrentals.com</p>
+    <p>Phone: +1 234 567 890</p>
+    <p>Address: 1234 Rental St, City, Country</p>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
