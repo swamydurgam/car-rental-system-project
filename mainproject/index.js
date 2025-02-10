@@ -12,7 +12,7 @@ function bookCar() {
     }
 }
 
-// Car Data
+
 const cars = [
     { id: 1, model: "Toyota Yaris", category: "Economy", dailyRate: 1500, image: "https://tse1.mm.bing.net/th?id=OIP.HkrxWcQwOzytH6Wz1heGKQHaEK&pid=Api&P=0&h=180" },
     { id: 2, model: "Ford Fiesta", category: "Economy", dailyRate: 1700, image: "https://tse3.mm.bing.net/th?id=OIP.Wc-WlpAg-hl77fRyUJH4rQHaE8&pid=Api&P=0&h=180" },
@@ -38,16 +38,16 @@ const cars = [
 
 
 
-// Get the container element where car cards will be injected
+
 const container = document.getElementById('car-container');
 
-// Loop through each car object and create its card
+
 cars.forEach(car => {
-    // Create the card container
+
     const card = document.createElement('div');
     card.className = 'car-card';
 
-    // Set the inner HTML of the card
+    
     card.innerHTML = `
       <img src="${car.image}" alt="${car.model}">
       <div class="details">
@@ -60,11 +60,10 @@ cars.forEach(car => {
       </div>
     `;
 
-    // Append the card to the container
     container.appendChild(card);
 });
 
-// Cart Functionality
+
 let cart = [];
 
 function updateCart() {
@@ -83,13 +82,12 @@ function updateCart() {
     });
 }
 
-// Show Cart Details with Navbar Sliding
 function toggleCart() {
     const cartSection = document.getElementById("cart-section");
     cartSection.style.right = cartSection.style.right === "0px" ? "-100%" : "0px";
 }
 
-// Add to Cart Function
+
 function addToCart(carId) {
     const selectedCar = cars.find(car => car.id === carId);
     if (selectedCar) {
@@ -98,16 +96,15 @@ function addToCart(carId) {
     }
 }
 
-// Remove from Cart Function
 function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
 }
 
-// Event Listener for Cart Link Click
+
 document.getElementById("cart-link").addEventListener("click", toggleCart);
 
-// Clear Cart functionality
+
 document.getElementById("clear-cart").addEventListener("click", () => {
     cart = [];
     updateCart();
@@ -121,13 +118,12 @@ function addToCart(carId) {
         cart.push(selectedCar);
         updateCart();
 
-        // Find the card element and add animation class
         const carCards = document.querySelectorAll('.car-card');
         carCards.forEach(card => {
             if (card.querySelector("h2").innerText === selectedCar.model) {
                 card.classList.add('added-to-cart');
 
-                // Remove animation class after 1s
+               
                 setTimeout(() => {
                     card.classList.remove('added-to-cart');
                 }, 1000);
