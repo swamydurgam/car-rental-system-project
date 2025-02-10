@@ -10,7 +10,7 @@
     position: fixed;
 }
 
-/* Logo Styling */
+
 .nitem1 {
     color: white;
     font-size: x-large;
@@ -18,7 +18,7 @@
     margin: 0;
 }
 
-/* Search Bar */
+
 #sbar {
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@
     color: white;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     #nav1 {
         flex-wrap: wrap; /* Allows elements to wrap on small screens */
@@ -231,12 +231,11 @@ body {
 }
 
 
-/* Navbar */
+
 #navbar {
     transition: width 0.3s ease-in-out;
 }
 
-/* Cart Panel */
 .cart-panel {
     position: fixed;
     top: 0;
@@ -268,7 +267,7 @@ body {
     background-color: #c82333;
 }
 
-/* Optional: Styling for Cart link */
+
 #cart-link {
     cursor: pointer;
 }
