@@ -10,7 +10,7 @@ import {
     signInAnonymously
   } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-auth.js";
   
-  // Firebase Configuration
+
   const firebaseConfig = {
     apiKey: "AIzaSyCKG2APrCdLiwg9kgKx8d0J9gJg1ABSOWM",
 
@@ -22,7 +22,7 @@ import {
     measurementId: "G-J61J7Z49FY"
   };
   
-  // Initialize Firebase
+
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   
@@ -32,8 +32,7 @@ import {
   const toggleText = document.getElementById("toggleText");
   const toggleLink = document.getElementById("toggleLink");
   const guestLoginBtn = document.getElementById("guestLogin");
-  
-  // Toggle between Sign In and Sign Up
+
   toggleLink.addEventListener("click", (event) => {
       event.preventDefault();
       if (signInForm.style.display === "none") {
@@ -49,7 +48,7 @@ import {
       }
   });
   
-  // Sign In Function
+
   signInForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = document.getElementById("signInEmail").value;
@@ -65,7 +64,7 @@ import {
       }
   });
   
-  // Sign Up Function
+
   signUpForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       const email = document.getElementById("signUpEmail").value;
@@ -81,7 +80,6 @@ import {
       }
   });
   
-  // Guest Login Function
   guestLoginBtn.addEventListener("click", async () => {
       try {
           const userCredential = await signInAnonymously(auth);
